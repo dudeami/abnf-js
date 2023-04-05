@@ -1,0 +1,7 @@
+base-rule = "ab" [ *"c" ] "c"
+
+valueset-example = %d1.2.3
+
+valuerange-example = %x1-3
+
+value-example = %b0
