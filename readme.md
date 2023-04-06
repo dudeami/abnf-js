@@ -68,6 +68,5 @@ if (results) {
 
 Grammars can fail for numerous reasons. Common issues are:
 
--   File uses LF for new lines, ABNF grammars specific CRLF new lines
+-   File uses LF for new lines, ABNF grammars specify CRLF new lines
 -   Whitespace at the end of the file, end of file must be a CRLF
--   Lowercase characters in hexadecimal values
