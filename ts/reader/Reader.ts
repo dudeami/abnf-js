@@ -50,6 +50,18 @@ export default class Reader {
     }
 
     /**
+     * Returns if the current `Reader` has a child with the given name at the given child index.
+     * @param name The name of the child to check for
+     * @param index The index of the child to check for
+     * @returns `true` if the child exists, otherwise `false`
+     */
+    public has(name: string, index: number = 0) {
+        name = name.toLowerCase();
+        const child = this.tree.children[name];
+        return Boolean(child) && Boolean(child[index]);
+    }
+
+    /**
      * Reads the substring of the document for the current `ParseTreeNode`
      * @returns The text from the document for the current `ParseTreeNode`
      */

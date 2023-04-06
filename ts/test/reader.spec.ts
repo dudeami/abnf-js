@@ -53,6 +53,14 @@ describe(`Reader Tests`, () => {
         assert(reader.get("PROOF").get("base64").read() === "v0X8v3Bz2T0CJGbJQyF0X+HI4Ts=");
     });
 
+    it(`returns if children exist or not`, () => {
+        const charArray = toCharArray(text, 8);
+        const reader = new Reader(charArray, results);
+        assert(reader.has("PROOF"));
+        assert(!reader.has("PROOF", 1));
+        assert(!reader.has("does-not-exist"));
+    });
+
     it(`errors on unknown utf-32 encoding`, () => {
         const charArray = toCharArray(text, 32);
         const reader = new Reader(charArray, results);
