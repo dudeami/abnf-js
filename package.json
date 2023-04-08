@@ -1,6 +1,6 @@
 {
     "name": "abnf-js",
-    "version": "0.1.3",
+    "version": "0.1.4",
     "description": "JS toolkit for parsing text using ABNF grammars",
     "main": "dist/index.js",
     "scripts": {

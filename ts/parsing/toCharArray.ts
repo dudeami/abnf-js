@@ -5,12 +5,11 @@
  * @returns A valid `CharArray` for use by `AbnfParser` or `AbnfReader`
  */
 export default function toCharArray(text: string, size: 8 | 16 | 32 = 16) {
-    const array = text.split("").map((c) => c.charCodeAt(0));
     if (size == 8) {
-        return Uint8Array.from(array);
+        return new TextEncoder().encode(text);
     } else if (size == 32) {
-        return Uint32Array.from(array);
+        return Uint32Array.from(text.split("").map((c) => c.charCodeAt(0)));
     } else {
-        return Uint16Array.from(array);
+        return Uint16Array.from(text.split("").map((c) => c.charCodeAt(0)));
     }
 }

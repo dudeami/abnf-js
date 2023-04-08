@@ -3,12 +3,18 @@ import Parser from "../parsing/Parser.js";
 import toCharArray from "../parsing/toCharArray.js";
 import CaseInsensitiveGrammar from "./grammars/CaseInsensitiveGrammar.js";
 import Utf16SmileyGrammar from "./grammars/Utf16SmileyGrammar.js";
+import Utf8Grammar from "./grammars/Utf8Grammar.js";
 import ValueSetGrammar from "./grammars/ValueSetGrammar.js";
 
 describe("Parser Tests", () => {
     it(`parses a static UTF-16 grammar and parses "😀"`, () => {
         const parser = new Parser(Utf16SmileyGrammar, "base-rule");
         assert(parser.parse(toCharArray("😀")));
+    });
+
+    it(`parses utf16 characters with different utf8 encoding using a utf8 grammar`, () => {
+        const parser = new Parser(Utf8Grammar, "utf8-char");
+        assert(parser.parse(toCharArray("À", 8)));
     });
 
     it(`parses a value set grammar correctly`, () => {
