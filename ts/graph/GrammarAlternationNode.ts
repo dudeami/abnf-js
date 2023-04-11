@@ -1,8 +1,8 @@
-import GrammarAlternation from "../elements/GrammarAlternation.js";
-import GrammarNode from "./GrammarNode.js";
-import fromElement from "./fromElement.js";
+import { GrammarAlternation } from "../elements/GrammarAlternation.js";
+import { GrammarNode } from "./GrammarNode.js";
+import { fromElement } from "./fromElement.js";
 
-export default class GrammarAlternationNode implements GrammarNode {
+export class GrammarAlternationNode implements GrammarNode {
     private readonly rule;
 
     private readonly nodes: GrammarNode[] = [];

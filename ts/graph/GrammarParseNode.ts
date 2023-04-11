@@ -1,5 +1,5 @@
-import GrammarNode from "./GrammarNode.js";
+import { GrammarNode } from "./GrammarNode.js";
 
-export default interface GrammarParseNode extends GrammarNode {
+export interface GrammarParseNode extends GrammarNode {
     parse(char: number): boolean;
 }

@@ -1,9 +1,9 @@
-import GrammarValueSet from "../elements/GrammarValueSet.js";
-import GrammarNode from "./GrammarNode.js";
-import GrammarParseNode from "./GrammarParseNode.js";
-import normalizeValue from "./normalizeValue.js";
+import { GrammarValueSet } from "../elements/GrammarValueSet.js";
+import { GrammarNode } from "./GrammarNode.js";
+import { GrammarParseNode } from "./GrammarParseNode.js";
+import { normalizeValue } from "./normalizeValue.js";
 
-export default class GrammarValueSetNode implements GrammarNode, GrammarParseNode {
+export class GrammarValueSetNode implements GrammarNode, GrammarParseNode {
     private readonly rule;
     private readonly nodes: GrammarNode[] = [];
     private readonly values: number[];

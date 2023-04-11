@@ -1,10 +1,10 @@
-import ParseNamedStep from "./ParseNamedStep.js";
-import ParseTreeNode from "./ParseTreeNode.js";
+import { ParseNamedStep } from "./ParseNamedStep.js";
+import { ParseTreeNode } from "./ParseTreeNode.js";
 
 /**
  * Given a `ParseNamedStep`, returns a `ParseTreeNode` to be used with an `AbnfReader` or manually accessed.
  */
-export default class ParseTreeBuilder {
+export class ParseTreeBuilder {
     private readonly steps: ParseNamedStep[];
     private index: number;
 

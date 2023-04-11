@@ -1,9 +1,9 @@
-import GrammarElement from "../elements/GrammarElement.js";
+import { GrammarElement } from "../elements/GrammarElement.js";
 
 /**
  * Defines the behavior of a `GrammarElement` within a `GrammarGraph`
  */
-export default interface GrammarNode {
+export interface GrammarNode {
     /**
      * Child elements of this `GrammarNode`, if any
      */

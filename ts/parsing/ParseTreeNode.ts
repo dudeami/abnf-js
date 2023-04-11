@@ -1,4 +1,4 @@
-export default interface ParseTreeNode {
+export interface ParseTreeNode {
     start: number;
     end: number;
     children: {

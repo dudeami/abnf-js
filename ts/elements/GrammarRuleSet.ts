@@ -1,7 +1,5 @@
-import GrammarElement from "./GrammarElement.js";
+import { GrammarElement } from "./GrammarElement.js";
 
-type GrammarRuleSet = {
+export type GrammarRuleSet = {
     [key: string]: GrammarElement;
 };
-
-export default GrammarRuleSet;

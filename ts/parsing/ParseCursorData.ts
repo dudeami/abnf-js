@@ -1,9 +1,9 @@
-import GrammarNode from "../graph/GrammarNode.js";
+import { GrammarNode } from "../graph/GrammarNode.js";
 
 /**
  * Represents the current state of a `ParseCursor` that is forkable to follow seperate branches of a `GrammarGraph`
  */
-export default class ParseCursorData {
+export class ParseCursorData {
     readonly index: number;
     readonly depth: number;
     readonly node: GrammarNode;

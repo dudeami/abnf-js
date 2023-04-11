@@ -1,10 +1,10 @@
-import ParseTreeNode from "../parsing/ParseTreeNode.js";
+import { ParseTreeNode } from "../parsing/ParseTreeNode.js";
 import { CharArray } from "../parsing/Parser.js";
 
 /**
  * Creates a `Reader` object to navigate and read `ParseTreeNode`s
  */
-export default class Reader {
+export class Reader {
     private readonly text: CharArray;
     private readonly tree: ParseTreeNode;
 

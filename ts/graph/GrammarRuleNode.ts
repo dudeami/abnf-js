@@ -1,7 +1,7 @@
-import GrammarRule from "../elements/GrammarRule.js";
-import GrammarNode from "./GrammarNode.js";
+import { GrammarRule } from "../elements/GrammarRule.js";
+import { GrammarNode } from "./GrammarNode.js";
 
-export default class GrammarRuleNode implements GrammarNode {
+export class GrammarRuleNode implements GrammarNode {
     private readonly rule;
     private readonly nodes: GrammarNode[] = [];
 

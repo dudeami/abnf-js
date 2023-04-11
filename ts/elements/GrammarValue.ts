@@ -1,6 +1,4 @@
-type GrammarValue = {
+export type GrammarValue = {
     type: "value";
     value: number | string;
 };
-
-export default GrammarValue;

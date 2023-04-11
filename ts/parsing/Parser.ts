@@ -1,10 +1,10 @@
-import GrammarRuleSet from "../elements/GrammarRuleSet.js";
-import GrammarGraph from "../graph/GrammarGraph.js";
-import ParseExecutor from "./ParseExecutor.js";
+import { GrammarRuleSet } from "../elements/GrammarRuleSet.js";
+import { GrammarGraph } from "../graph/GrammarGraph.js";
+import { ParseExecutor } from "./ParseExecutor.js";
 
 export type CharArray = Uint8Array | Uint16Array | Uint32Array;
 
-export default class Parser {
+export class Parser {
     private readonly grammar: GrammarRuleSet;
     private readonly graph: GrammarGraph;
     private readonly baseRule: string;

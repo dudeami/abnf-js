@@ -1,12 +1,12 @@
-import GrammarRule from "../elements/GrammarRule.js";
-import GrammarRuleSet from "../elements/GrammarRuleSet.js";
-import GrammarNode from "./GrammarNode.js";
-import fromElement from "./fromElement.js";
+import { GrammarRule } from "../elements/GrammarRule.js";
+import { GrammarRuleSet } from "../elements/GrammarRuleSet.js";
+import { GrammarNode } from "./GrammarNode.js";
+import { fromElement } from "./fromElement.js";
 
 /**
  * Given a `GrammarRuleSet`, creates a `GrammarGraph` representation that can be walked to parse documents.
  */
-export default class GrammarGraph {
+export class GrammarGraph {
     /**
      * The rule set of this `GrammarGraph`, represented by `GrammarNode`s
      */

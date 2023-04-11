@@ -5,7 +5,7 @@
  * @param deps Any dependencies for this document. Only `CoreGrammar` and `AbnfGrammar` will work by default
  * @returns A string containing the typescript for the given grammar definition
  */
-export default function createTypescriptGrammar(className: string, grammar: string, deps: string[]) {
+export function createTypescriptGrammar(className: string, grammar: string, deps: string[]) {
     const depString = deps.map((d) => ", " + d).join("");
     return `import { buildGrammar, AbnfGrammarRuleSet${depString} } from "abnf-js";
 
@@ -13,6 +13,6 @@ const RULESET: AbnfGrammarRuleSet = ${grammar};
 
 const ${className} = buildGrammar(RULESET${depString});
 
-export default ${className};
+export ${className};
 `;
 }

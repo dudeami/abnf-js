@@ -1,11 +1,11 @@
 import { assert } from "chai";
 import fs from "fs";
-import Compiler from "../compilation/Compiler.js";
-import GrammarAlternation from "../elements/GrammarAlternation.js";
-import GrammarRepetition from "../elements/GrammarRepetition.js";
-import GrammarRule from "../elements/GrammarRule.js";
-import GrammarValue from "../elements/GrammarValue.js";
-import GrammarValueSet from "../elements/GrammarValueSet.js";
+import { Compiler } from "../compilation/Compiler.js";
+import { GrammarAlternation } from "../elements/GrammarAlternation.js";
+import { GrammarRepetition } from "../elements/GrammarRepetition.js";
+import { GrammarRule } from "../elements/GrammarRule.js";
+import { GrammarValue } from "../elements/GrammarValue.js";
+import { GrammarValueSet } from "../elements/GrammarValueSet.js";
 
 describe("Compilation Tests", () => {
     it(`fails on broken grammars`, () => {

@@ -1,9 +1,9 @@
 import { assert } from "chai";
-import ParseTreeNode from "../parsing/ParseTreeNode.js";
-import Parser from "../parsing/Parser.js";
-import toCharArray from "../parsing/toCharArray.js";
-import Reader from "../reader/Reader.js";
-import ScramGrammar from "./grammars/ScramGrammar.js";
+import { ParseTreeNode } from "../parsing/ParseTreeNode.js";
+import { Parser } from "../parsing/Parser.js";
+import { toCharArray } from "../parsing/toCharArray.js";
+import { Reader } from "../reader/Reader.js";
+import { ScramGrammar } from "./grammars/ScramGrammar.js";
 
 describe(`Reader Tests`, () => {
     const text = "c=biws,r=fyko+d2lbbFgONRv9qkxdawL3rfcNHYJY1ZVvWVs7j,ext=test,p=v0X8v3Bz2T0CJGbJQyF0X+HI4Ts=";

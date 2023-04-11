@@ -1,4 +1,4 @@
-export default class ParseNamedStep {
+export class ParseNamedStep {
     public readonly prev: ParseNamedStep | undefined;
     public readonly name: string;
     public readonly isStart: boolean;

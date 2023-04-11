@@ -1,6 +1,6 @@
-import GrammarNode from "../graph/GrammarNode.js";
-import ParseCursorData from "./ParseCursorData.js";
-import ParseNamedStep from "./ParseNamedStep.js";
+import { GrammarNode } from "../graph/GrammarNode.js";
+import { ParseCursorData } from "./ParseCursorData.js";
+import { ParseNamedStep } from "./ParseNamedStep.js";
 
 /**
  * A cursor which represents a branch in the GrammarGraph that is being parsed.

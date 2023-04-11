@@ -1,5 +1,5 @@
-import GrammarRuleSet from "../../elements/GrammarRuleSet.js";
-import buildGrammar from "../../elements/buildGrammar.js";
+import { GrammarRuleSet } from "../../elements/GrammarRuleSet.js";
+import { buildGrammar } from "../../elements/buildGrammar.js";
 
 const RULESET: GrammarRuleSet = {
     "base-rule": {
@@ -22,6 +22,4 @@ const RULESET: GrammarRuleSet = {
     },
 };
 
-const CaseInsensitiveGrammar = buildGrammar(RULESET);
-
-export default CaseInsensitiveGrammar;
+export const CaseInsensitiveGrammar = buildGrammar(RULESET);

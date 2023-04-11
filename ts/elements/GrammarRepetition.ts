@@ -1,10 +1,8 @@
-import GrammarElement from "./GrammarElement.js";
+import { GrammarElement } from "./GrammarElement.js";
 
-type GrammarRepetition = {
+export type GrammarRepetition = {
     type: "repetition";
     min?: number;
     max?: number;
     element: GrammarElement;
 };
-
-export default GrammarRepetition;

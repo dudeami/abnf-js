@@ -1,5 +1,5 @@
-import GrammarRuleSet from "../elements/GrammarRuleSet.js";
-import buildGrammar from "../elements/buildGrammar.js";
+import { GrammarRuleSet } from "../elements/GrammarRuleSet.js";
+import { buildGrammar } from "../elements/buildGrammar.js";
 
 const RULESET: GrammarRuleSet = {
     ALPHA: {
@@ -334,6 +334,4 @@ const RULESET: GrammarRuleSet = {
     },
 };
 
-const CoreGrammar = buildGrammar(RULESET);
-
-export default CoreGrammar;
+export const CoreGrammar = buildGrammar(RULESET);

@@ -1,6 +1,6 @@
-import GrammarRuleSet from "../../elements/GrammarRuleSet.js";
+import { GrammarRuleSet } from "../../elements/GrammarRuleSet.js";
 
-const ValueSetGrammar: GrammarRuleSet = {
+export const ValueSetGrammar: GrammarRuleSet = {
     "base-rule": {
         type: "repetition",
         element: {
@@ -9,5 +9,3 @@ const ValueSetGrammar: GrammarRuleSet = {
         },
     },
 };
-
-export default ValueSetGrammar;

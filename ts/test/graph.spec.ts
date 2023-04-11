@@ -1,11 +1,11 @@
 import { assert } from "chai";
 import fs from "fs";
-import Compiler from "../compilation/Compiler.js";
-import GrammarGraph from "../graph/GrammarGraph.js";
-import GrammarValueNode from "../graph/GrammarValueNode.js";
-import GrammarValueRangeNode from "../graph/GrammarValueRangeNode.js";
-import GrammarValueSetNode from "../graph/GrammarValueSetNode.js";
-import normalizeValue from "../graph/normalizeValue.js";
+import { Compiler } from "../compilation/Compiler.js";
+import { GrammarGraph } from "../graph/GrammarGraph.js";
+import { GrammarValueNode } from "../graph/GrammarValueNode.js";
+import { GrammarValueRangeNode } from "../graph/GrammarValueRangeNode.js";
+import { GrammarValueSetNode } from "../graph/GrammarValueSetNode.js";
+import { normalizeValue } from "../graph/normalizeValue.js";
 
 describe(`Graph Tests`, () => {
     it(`normalizes values correctly`, () => {

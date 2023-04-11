@@ -1,6 +1,6 @@
-import GrammarRuleSet from "../../elements/GrammarRuleSet.js";
+import { GrammarRuleSet } from "../../elements/GrammarRuleSet.js";
 
-const Utf16SmileyGrammar: GrammarRuleSet = {
+export const Utf16SmileyGrammar: GrammarRuleSet = {
     "base-rule": {
         type: "concatenation",
         elements: [
@@ -25,5 +25,3 @@ const Utf16SmileyGrammar: GrammarRuleSet = {
         ],
     },
 };
-
-export default Utf16SmileyGrammar;

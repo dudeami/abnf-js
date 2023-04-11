@@ -1,8 +1,6 @@
-import GrammarElement from "./GrammarElement.js";
+import { GrammarElement } from "./GrammarElement.js";
 
-type GrammarAlternation = {
+export type GrammarAlternation = {
     type: "alternation";
     alternates: GrammarElement[];
 };
-
-export default GrammarAlternation;

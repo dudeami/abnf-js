@@ -1,10 +1,10 @@
 import { assert } from "chai";
-import Parser from "../parsing/Parser.js";
-import toCharArray from "../parsing/toCharArray.js";
-import CaseInsensitiveGrammar from "./grammars/CaseInsensitiveGrammar.js";
-import Utf16SmileyGrammar from "./grammars/Utf16SmileyGrammar.js";
-import Utf8Grammar from "./grammars/Utf8Grammar.js";
-import ValueSetGrammar from "./grammars/ValueSetGrammar.js";
+import { Parser } from "../parsing/Parser.js";
+import { toCharArray } from "../parsing/toCharArray.js";
+import { CaseInsensitiveGrammar } from "./grammars/CaseInsensitiveGrammar.js";
+import { Utf16SmileyGrammar } from "./grammars/Utf16SmileyGrammar.js";
+import { Utf8Grammar } from "./grammars/Utf8Grammar.js";
+import { ValueSetGrammar } from "./grammars/ValueSetGrammar.js";
 
 describe("Parser Tests", () => {
     it(`parses a static UTF-16 grammar and parses "😀"`, () => {

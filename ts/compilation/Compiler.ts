@@ -2,27 +2,27 @@
  * Given an ABNF grammar as input, creates a grammar JS file with information for the ABNF parser.
  */
 
-import GrammarAlternation from "../elements/GrammarAlternation.js";
-import GrammarConcatenation from "../elements/GrammarConcatenation.js";
-import GrammarElement from "../elements/GrammarElement.js";
-import GrammarOption from "../elements/GrammarOption.js";
-import GrammarRepetition from "../elements/GrammarRepetition.js";
-import GrammarRule from "../elements/GrammarRule.js";
-import GrammarRuleSet from "../elements/GrammarRuleSet.js";
-import GrammarValue from "../elements/GrammarValue.js";
-import GrammarValueRange from "../elements/GrammarValueRange.js";
-import GrammarValueSet from "../elements/GrammarValueSet.js";
-import AbnfGrammar from "../grammars/AbnfGrammar.js";
-import normalizeValue from "../graph/normalizeValue.js";
-import ParseTreeNode from "../parsing/ParseTreeNode.js";
-import Parser from "../parsing/Parser.js";
-import toCharArray from "../parsing/toCharArray.js";
+import { GrammarAlternation } from "../elements/GrammarAlternation.js";
+import { GrammarConcatenation } from "../elements/GrammarConcatenation.js";
+import { GrammarElement } from "../elements/GrammarElement.js";
+import { GrammarOption } from "../elements/GrammarOption.js";
+import { GrammarRepetition } from "../elements/GrammarRepetition.js";
+import { GrammarRule } from "../elements/GrammarRule.js";
+import { GrammarRuleSet } from "../elements/GrammarRuleSet.js";
+import { GrammarValue } from "../elements/GrammarValue.js";
+import { GrammarValueRange } from "../elements/GrammarValueRange.js";
+import { GrammarValueSet } from "../elements/GrammarValueSet.js";
+import { AbnfGrammar } from "../grammars/AbnfGrammar.js";
+import { normalizeValue } from "../graph/normalizeValue.js";
+import { ParseTreeNode } from "../parsing/ParseTreeNode.js";
+import { Parser } from "../parsing/Parser.js";
+import { toCharArray } from "../parsing/toCharArray.js";
 
 /**
  * Compiler for the ABNF language. Given a ABNF grammar represented in text, returns a JSON representation of the
  * grammar for use with the ABNF Parser in this package.
  */
-export default class Compiler {
+export class Compiler {
     private readonly text: string;
 
     /**

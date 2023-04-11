@@ -2,8 +2,8 @@
 
 import { program } from "commander";
 import fs from "fs";
-import Compiler from "../compilation/Compiler.js";
-import createTypescriptGrammar from "../templates/typescript.js";
+import { Compiler } from "../compilation/Compiler.js";
+import { createTypescriptGrammar } from "../templates/typescript.js";
 
 program
     .option("-n, --name <string>", "Name of the grammar class created")

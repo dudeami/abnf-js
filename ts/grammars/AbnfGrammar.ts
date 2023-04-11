@@ -1,6 +1,6 @@
-import GrammarRuleSet from "../elements/GrammarRuleSet.js";
-import buildGrammar from "../elements/buildGrammar.js";
-import CoreGrammar from "./CoreGrammar.js";
+import { GrammarRuleSet } from "../elements/GrammarRuleSet.js";
+import { buildGrammar } from "../elements/buildGrammar.js";
+import { CoreGrammar } from "../index.js";
 
 const RULESET: GrammarRuleSet = {
     rulelist: {
@@ -1206,6 +1206,4 @@ const RULESET: GrammarRuleSet = {
     },
 };
 
-const AbnfGrammar = buildGrammar(RULESET, CoreGrammar);
-
-export default AbnfGrammar;
+export const AbnfGrammar = buildGrammar(RULESET, CoreGrammar);
