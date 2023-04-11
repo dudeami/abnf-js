@@ -50,6 +50,20 @@ export class Reader {
     }
 
     /**
+     * Returns an array of `Reader`s for the given rule name, or throws an error if it does not exist.
+     * @param name The rule name to build readers for each child
+     * @returns `Reader[]` for each child of the rule name passed
+     */
+    public getAll(name: string) {
+        name = name.toLowerCase();
+        try {
+            return this.tree.children[name].map((child) => new Reader(this.text, child));
+        } catch (e) {
+            throw new Error(`Child "${name}" does not exist within this parse tree.`);
+        }
+    }
+
+    /**
      * Returns if the current `Reader` has a child with the given name at the given child index.
      * @param name The name of the child to check for
      * @param index The index of the child to check for

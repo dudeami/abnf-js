@@ -43,18 +43,33 @@ describe(`Reader Tests`, () => {
 
     it(`reads the proof from utf-8`, () => {
         const charArray = toCharArray(text, 8);
+        const results = <ParseTreeNode>parser.parse(charArray);
         const reader = new Reader(charArray, results);
         assert(reader.get("proof").get("base64").read() === "v0X8v3Bz2T0CJGbJQyF0X+HI4Ts=");
     });
 
     it(`reads using a case-insensitive rule name`, () => {
-        const charArray = toCharArray(text, 8);
         const reader = new Reader(charArray, results);
         assert(reader.get("PROOF").get("base64").read() === "v0X8v3Bz2T0CJGbJQyF0X+HI4Ts=");
     });
 
+    it(`reads all children for a given rule`, () => {
+        const charArray = toCharArray(
+            "c=biws,r=fyko+d2lbbFgONRv9qkxdawL3rfcNHYJY1ZVvWVs7j,ext=test,another=another,p=v0X8v3Bz2T0CJGbJQyF0X+HI4Ts="
+        );
+        const results = <ParseTreeNode>parser.parse(charArray);
+        const reader = new Reader(charArray, results);
+        const children = reader
+            .get("client-final-message-without-proof")
+            .get("extensions")
+            .getAll("attr-val")
+            .map((r) => r.read());
+        assert(children.length === 2);
+        assert(children[0] === "ext=test");
+        assert(children[1] === "another=another");
+    });
+
     it(`returns if children exist or not`, () => {
-        const charArray = toCharArray(text, 8);
         const reader = new Reader(charArray, results);
         assert(reader.has("PROOF"));
         assert(!reader.has("PROOF", 1));
@@ -63,6 +78,7 @@ describe(`Reader Tests`, () => {
 
     it(`errors on unknown utf-32 encoding`, () => {
         const charArray = toCharArray(text, 32);
+        const results = <ParseTreeNode>parser.parse(charArray);
         const reader = new Reader(charArray, results);
         try {
             reader.get("proof").get("base64").read();
