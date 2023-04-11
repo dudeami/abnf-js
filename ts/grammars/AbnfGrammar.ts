@@ -1,6 +1,5 @@
 import { GrammarRuleSet } from "../elements/GrammarRuleSet.js";
 import { buildGrammar } from "../elements/buildGrammar.js";
-import { CoreGrammar } from "../index.js";
 
 const RULESET: GrammarRuleSet = {
     rulelist: {
@@ -95,7 +94,7 @@ const RULESET: GrammarRuleSet = {
                 type: "repetition",
                 element: {
                     type: "rule",
-                    name: "ALPHA",
+                    name: "alpha",
                 },
                 min: 1,
                 max: 1,
@@ -109,7 +108,7 @@ const RULESET: GrammarRuleSet = {
                             type: "repetition",
                             element: {
                                 type: "rule",
-                                name: "ALPHA",
+                                name: "alpha",
                             },
                             min: 1,
                             max: 1,
@@ -118,7 +117,7 @@ const RULESET: GrammarRuleSet = {
                             type: "repetition",
                             element: {
                                 type: "rule",
-                                name: "DIGIT",
+                                name: "digit",
                             },
                             min: 1,
                             max: 1,
@@ -221,7 +220,7 @@ const RULESET: GrammarRuleSet = {
                 type: "repetition",
                 element: {
                     type: "rule",
-                    name: "WSP",
+                    name: "wsp",
                 },
                 min: 1,
                 max: 1,
@@ -244,7 +243,7 @@ const RULESET: GrammarRuleSet = {
                             type: "repetition",
                             element: {
                                 type: "rule",
-                                name: "WSP",
+                                name: "wsp",
                             },
                             min: 1,
                             max: 1,
@@ -272,7 +271,7 @@ const RULESET: GrammarRuleSet = {
                 type: "repetition",
                 element: {
                     type: "rule",
-                    name: "CRLF",
+                    name: "crlf",
                 },
                 min: 1,
                 max: 1,
@@ -300,7 +299,7 @@ const RULESET: GrammarRuleSet = {
                             type: "repetition",
                             element: {
                                 type: "rule",
-                                name: "WSP",
+                                name: "wsp",
                             },
                             min: 1,
                             max: 1,
@@ -309,7 +308,7 @@ const RULESET: GrammarRuleSet = {
                             type: "repetition",
                             element: {
                                 type: "rule",
-                                name: "VCHAR",
+                                name: "vchar",
                             },
                             min: 1,
                             max: 1,
@@ -321,7 +320,7 @@ const RULESET: GrammarRuleSet = {
                 type: "repetition",
                 element: {
                     type: "rule",
-                    name: "CRLF",
+                    name: "crlf",
                 },
                 min: 1,
                 max: 1,
@@ -478,7 +477,7 @@ const RULESET: GrammarRuleSet = {
                 type: "repetition",
                 element: {
                     type: "rule",
-                    name: "DIGIT",
+                    name: "digit",
                 },
                 min: 1,
             },
@@ -491,7 +490,7 @@ const RULESET: GrammarRuleSet = {
                             type: "repetition",
                             element: {
                                 type: "rule",
-                                name: "DIGIT",
+                                name: "digit",
                             },
                         },
                         {
@@ -507,7 +506,7 @@ const RULESET: GrammarRuleSet = {
                             type: "repetition",
                             element: {
                                 type: "rule",
-                                name: "DIGIT",
+                                name: "digit",
                             },
                         },
                     ],
@@ -770,7 +769,7 @@ const RULESET: GrammarRuleSet = {
                 type: "repetition",
                 element: {
                     type: "rule",
-                    name: "DQUOTE",
+                    name: "dquote",
                 },
                 min: 1,
                 max: 1,
@@ -805,7 +804,7 @@ const RULESET: GrammarRuleSet = {
                 type: "repetition",
                 element: {
                     type: "rule",
-                    name: "DQUOTE",
+                    name: "dquote",
                 },
                 min: 1,
                 max: 1,
@@ -879,7 +878,7 @@ const RULESET: GrammarRuleSet = {
                 type: "repetition",
                 element: {
                     type: "rule",
-                    name: "BIT",
+                    name: "bit",
                 },
                 min: 1,
             },
@@ -908,7 +907,7 @@ const RULESET: GrammarRuleSet = {
                                             type: "repetition",
                                             element: {
                                                 type: "rule",
-                                                name: "BIT",
+                                                name: "bit",
                                             },
                                             min: 1,
                                         },
@@ -934,7 +933,7 @@ const RULESET: GrammarRuleSet = {
                                             type: "repetition",
                                             element: {
                                                 type: "rule",
-                                                name: "BIT",
+                                                name: "bit",
                                             },
                                             min: 1,
                                         },
@@ -967,7 +966,7 @@ const RULESET: GrammarRuleSet = {
                 type: "repetition",
                 element: {
                     type: "rule",
-                    name: "DIGIT",
+                    name: "digit",
                 },
                 min: 1,
             },
@@ -996,7 +995,7 @@ const RULESET: GrammarRuleSet = {
                                             type: "repetition",
                                             element: {
                                                 type: "rule",
-                                                name: "DIGIT",
+                                                name: "digit",
                                             },
                                             min: 1,
                                         },
@@ -1022,7 +1021,7 @@ const RULESET: GrammarRuleSet = {
                                             type: "repetition",
                                             element: {
                                                 type: "rule",
-                                                name: "DIGIT",
+                                                name: "digit",
                                             },
                                             min: 1,
                                         },
@@ -1055,7 +1054,7 @@ const RULESET: GrammarRuleSet = {
                 type: "repetition",
                 element: {
                     type: "rule",
-                    name: "HEXDIG",
+                    name: "hexdig",
                 },
                 min: 1,
             },
@@ -1084,7 +1083,7 @@ const RULESET: GrammarRuleSet = {
                                             type: "repetition",
                                             element: {
                                                 type: "rule",
-                                                name: "HEXDIG",
+                                                name: "hexdig",
                                             },
                                             min: 1,
                                         },
@@ -1110,7 +1109,7 @@ const RULESET: GrammarRuleSet = {
                                             type: "repetition",
                                             element: {
                                                 type: "rule",
-                                                name: "HEXDIG",
+                                                name: "hexdig",
                                             },
                                             min: 1,
                                         },
@@ -1183,7 +1182,7 @@ const RULESET: GrammarRuleSet = {
                 type: "repetition",
                 element: {
                     type: "rule",
-                    name: "DIGIT",
+                    name: "digit",
                 },
             },
             {
@@ -1199,11 +1198,11 @@ const RULESET: GrammarRuleSet = {
                 type: "repetition",
                 element: {
                     type: "rule",
-                    name: "DIGIT",
+                    name: "digit",
                 },
             },
         ],
     },
 };
 
-export const AbnfGrammar = buildGrammar(RULESET, CoreGrammar);
+export const AbnfGrammar = buildGrammar(RULESET);

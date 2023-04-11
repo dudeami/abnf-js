@@ -2,7 +2,7 @@ import { GrammarRuleSet } from "../elements/GrammarRuleSet.js";
 import { buildGrammar } from "../elements/buildGrammar.js";
 
 const RULESET: GrammarRuleSet = {
-    ALPHA: {
+    alpha: {
         type: "alternation",
         alternates: [
             {
@@ -25,7 +25,7 @@ const RULESET: GrammarRuleSet = {
             },
         ],
     },
-    BIT: {
+    bit: {
         type: "alternation",
         alternates: [
             {
@@ -48,7 +48,7 @@ const RULESET: GrammarRuleSet = {
             },
         ],
     },
-    CHAR: {
+    char: {
         type: "repetition",
         element: {
             type: "value-range",
@@ -57,7 +57,7 @@ const RULESET: GrammarRuleSet = {
         min: 1,
         max: 1,
     },
-    CR: {
+    cr: {
         type: "repetition",
         element: {
             type: "value",
@@ -66,14 +66,14 @@ const RULESET: GrammarRuleSet = {
         min: 1,
         max: 1,
     },
-    CRLF: {
+    crlf: {
         type: "concatenation",
         elements: [
             {
                 type: "repetition",
                 element: {
                     type: "rule",
-                    name: "CR",
+                    name: "cr",
                 },
                 min: 1,
                 max: 1,
@@ -82,14 +82,14 @@ const RULESET: GrammarRuleSet = {
                 type: "repetition",
                 element: {
                     type: "rule",
-                    name: "LF",
+                    name: "lf",
                 },
                 min: 1,
                 max: 1,
             },
         ],
     },
-    CTL: {
+    ctl: {
         type: "alternation",
         alternates: [
             {
@@ -112,7 +112,7 @@ const RULESET: GrammarRuleSet = {
             },
         ],
     },
-    DIGIT: {
+    digit: {
         type: "repetition",
         element: {
             type: "value-range",
@@ -121,7 +121,7 @@ const RULESET: GrammarRuleSet = {
         min: 1,
         max: 1,
     },
-    DQUOTE: {
+    dquote: {
         type: "repetition",
         element: {
             type: "value",
@@ -130,14 +130,14 @@ const RULESET: GrammarRuleSet = {
         min: 1,
         max: 1,
     },
-    HEXDIG: {
+    hexdig: {
         type: "alternation",
         alternates: [
             {
                 type: "repetition",
                 element: {
                     type: "rule",
-                    name: "DIGIT",
+                    name: "digit",
                 },
                 min: 1,
                 max: 1,
@@ -198,7 +198,7 @@ const RULESET: GrammarRuleSet = {
             },
         ],
     },
-    HTAB: {
+    htab: {
         type: "repetition",
         element: {
             type: "value",
@@ -207,7 +207,7 @@ const RULESET: GrammarRuleSet = {
         min: 1,
         max: 1,
     },
-    LF: {
+    lf: {
         type: "repetition",
         element: {
             type: "value",
@@ -216,7 +216,7 @@ const RULESET: GrammarRuleSet = {
         min: 1,
         max: 1,
     },
-    LWSP: {
+    lwsp: {
         type: "repetition",
         element: {
             type: "alternation",
@@ -225,7 +225,7 @@ const RULESET: GrammarRuleSet = {
                     type: "repetition",
                     element: {
                         type: "rule",
-                        name: "WSP",
+                        name: "wsp",
                     },
                     min: 1,
                     max: 1,
@@ -237,7 +237,7 @@ const RULESET: GrammarRuleSet = {
                             type: "repetition",
                             element: {
                                 type: "rule",
-                                name: "CRLF",
+                                name: "crlf",
                             },
                             min: 1,
                             max: 1,
@@ -246,7 +246,7 @@ const RULESET: GrammarRuleSet = {
                             type: "repetition",
                             element: {
                                 type: "rule",
-                                name: "WSP",
+                                name: "wsp",
                             },
                             min: 1,
                             max: 1,
@@ -256,7 +256,7 @@ const RULESET: GrammarRuleSet = {
             ],
         },
     },
-    OCTET: {
+    octet: {
         type: "repetition",
         element: {
             type: "value-range",
@@ -265,7 +265,7 @@ const RULESET: GrammarRuleSet = {
         min: 1,
         max: 1,
     },
-    SP: {
+    sp: {
         type: "repetition",
         element: {
             type: "value",
@@ -274,7 +274,7 @@ const RULESET: GrammarRuleSet = {
         min: 1,
         max: 1,
     },
-    VCHAR: {
+    vchar: {
         type: "repetition",
         element: {
             type: "value-range",
@@ -283,14 +283,14 @@ const RULESET: GrammarRuleSet = {
         min: 1,
         max: 1,
     },
-    WSP: {
+    wsp: {
         type: "alternation",
         alternates: [
             {
                 type: "repetition",
                 element: {
                     type: "rule",
-                    name: "SP",
+                    name: "sp",
                 },
                 min: 1,
                 max: 1,
@@ -299,14 +299,14 @@ const RULESET: GrammarRuleSet = {
                 type: "repetition",
                 element: {
                     type: "rule",
-                    name: "HTAB",
+                    name: "htab",
                 },
                 min: 1,
                 max: 1,
             },
         ],
     },
-    OWS: {
+    ows: {
         type: "repetition",
         element: {
             type: "alternation",
@@ -315,7 +315,7 @@ const RULESET: GrammarRuleSet = {
                     type: "repetition",
                     element: {
                         type: "rule",
-                        name: "SP",
+                        name: "sp",
                     },
                     min: 1,
                     max: 1,
@@ -324,7 +324,7 @@ const RULESET: GrammarRuleSet = {
                     type: "repetition",
                     element: {
                         type: "rule",
-                        name: "HTAB",
+                        name: "htab",
                     },
                     min: 1,
                     max: 1,
