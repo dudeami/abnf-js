@@ -11,8 +11,6 @@ export function createTypescriptGrammar(className: string, grammar: string, deps
 
 const RULESET: AbnfGrammarRuleSet = ${grammar};
 
-const ${className} = buildGrammar(RULESET${depString});
-
-export ${className};
+export const ${className} = buildGrammar(RULESET${depString});
 `;
 }

@@ -87,6 +87,14 @@ describe("Compilation Tests", () => {
         assert(altRule.alternates.length === 3);
     });
 
+    it(`compiles prose-val into a rule element`, () => {
+        const compiler = new Compiler(`base-rule = 1<prose-test>\nprose-test = "a"\n`, true);
+        const grammar = compiler.build();
+        const repRule = <GrammarRepetition>grammar["base-rule"];
+        const ruleRef = <GrammarRule>repRule.element;
+        assert(ruleRef.name === "prose-test");
+    });
+
     it(`references rulenames case-insensitively`, () => {
         const compiler = new Compiler(`base-rule = Second-Rule\nSECOND-RULE = "a"\n`);
         const grammar = compiler.build();

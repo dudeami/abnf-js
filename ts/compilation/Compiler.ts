@@ -114,6 +114,12 @@ export class Compiler {
             };
         } else if (node.children["char-val"]) {
             return this.buildCharValueElement(node.children["char-val"][0]);
+        } else if (node.children["prose-val"]) {
+            const rulename = this.extractText(node).toLowerCase();
+            return <GrammarRule>{
+                type: "rule",
+                name: rulename.substring(1, rulename.length - 1),
+            };
         } else {
             return this.buildNumValueElement(node);
         }
