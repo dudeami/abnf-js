@@ -203,7 +203,7 @@ export class Compiler {
                 elements: [
                     {
                         type: "rule",
-                        name: "OWS",
+                        name: "ows",
                     },
                     {
                         type: "value",
@@ -211,7 +211,7 @@ export class Compiler {
                     },
                     {
                         type: "rule",
-                        name: "OWS",
+                        name: "ows",
                     },
                     element,
                 ],

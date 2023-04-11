@@ -2,6 +2,7 @@ import { assert } from "chai";
 import { Parser } from "../parsing/Parser.js";
 import { toCharArray } from "../parsing/toCharArray.js";
 import { CaseInsensitiveGrammar } from "./grammars/CaseInsensitiveGrammar.js";
+import { CommaDelimitedGrammar } from "./grammars/CommaDelimitedGrammar.js";
 import { Utf16SmileyGrammar } from "./grammars/Utf16SmileyGrammar.js";
 import { Utf8Grammar } from "./grammars/Utf8Grammar.js";
 import { ValueSetGrammar } from "./grammars/ValueSetGrammar.js";
@@ -70,5 +71,11 @@ describe("Parser Tests", () => {
             const error = <Error>e;
             assert(error.message === `Unable to find rule "base-rule-not-found" in current grammar.`);
         }
+    });
+
+    it(`parses a list of arguments using the comma-delimited element (#rule)`, () => {
+        const parser = new Parser(CommaDelimitedGrammar, "base-rule");
+        const results = parser.parse(toCharArray("aaa , aa, a ,a"));
+        assert(results);
     });
 });
